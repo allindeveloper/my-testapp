@@ -1,13 +1,43 @@
-import logo from './logo.svg';
+import logo from './assets/svg/logo.svg';
+import {useState} from 'react';
 import './App.css';
+import Button from "./components/Button/Button";
+import InputField from "./components/Input/InputField";
+const App = () => {
+  const [counter, setCounter] = useState(0)
 
-function App() {
+
+  const incrementCounter = () => {
+    const newCounter = counter + 1
+    setCounter(newCounter)
+  }
+
+  const decrementCounter = () => {
+    const newCounter = counter - 1;
+    if(newCounter <=0){
+      alert('Hey You cannot go below this point')
+    }else{
+    setCounter(newCounter)
+    }
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
+        </p>
+        
+       
+        <p>
+          <InputField  value={counter} />
+        </p>
+        <p>
+          <Button handleClick={incrementCounter} title="Increment Counter" />
+        </p>
+        <p>
+          <Button handleClick={decrementCounter}  title="Decrement Counter" />
         </p>
         <a
           className="App-link"
