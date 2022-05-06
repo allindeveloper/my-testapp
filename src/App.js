@@ -4,6 +4,9 @@ import './App.css';
 import Button from "./components/Button/Button";
 import InputField from "./components/Input/InputField";
 const App = () => {
+  // useState is one of the react hooks in functional components.
+  // Returns a stateful value, and a function to update it.
+
   const [counter, setCounter] = useState(0)
 
 
