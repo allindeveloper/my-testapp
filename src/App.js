@@ -1,5 +1,5 @@
 import logo from './assets/svg/logo.svg';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import './App.css';
 import Button from "./components/Button/Button";
 import InputField from "./components/Input/InputField";
@@ -10,10 +10,27 @@ const App = () => {
   const [counter, setCounter] = useState(0)
 
 
+  useEffect(() => {
+    console.log("Heyy")
+  })
+
+  useEffect(()=>{
+    console.log("App component Render")
+  },[])
+
+  useEffect(()=>{
+    if(counter){
+      if(counter === 5){
+        alert("Yes counter is 5")
+      }
+    }
+  },[counter])
+
   const incrementCounter = () => {
     const newCounter = counter + 1
     setCounter(newCounter)
   }
+
 
   const decrementCounter = () => {
     const newCounter = counter - 1;
@@ -37,7 +54,7 @@ const App = () => {
           <InputField  value={counter} />
         </p>
         <p>
-          <Button handleClick={incrementCounter} title="Increment Counter" />
+          <Button handleClick={incrementCounter} />
         </p>
         <p>
           <Button handleClick={decrementCounter}  title="Decrement Counter" />

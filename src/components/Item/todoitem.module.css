@@ -1,0 +1,9 @@
+.middleSection {
+    padding-left: var(--appPadding);
+    padding-right: var(--appPadding);
+    display: flex;
+    justify-content:space-between;
+}
+.middleSection img {
+    cursor: pointer;
+}

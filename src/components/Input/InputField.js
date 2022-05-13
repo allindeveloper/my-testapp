@@ -9,7 +9,7 @@ import React from "react";
 const InputField = ({placeholder, value}) => {
 
     return (
-        <input value={value} placeholder={placeholder} />
+        <input readOnly value={value} placeholder={placeholder} />
     )
 
 }

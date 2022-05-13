@@ -1,18 +1,30 @@
 import React from "react";
-import "./button.css"
-
+// import "./button.css"
+import buttonStyles from "./button.module.css";
+import { PropTypes } from "prop-types";
 /**
- * 
- * @param {string} title 
- * @param {function} handleClick 
- * @returns 
+ *
+ * @param {string} title
+ * @param {Component} image
+ * @param {function} handleClick
+ * @returns
  */
-const Button = ({title, handleClick}) => {
+const Button = (props) => {
+    
+  const { title, handleClick, image } = props;
+  return (
+    <button className={buttonStyles.mybutton} onClick={handleClick}>
+      {image}{title}
+    </button>
+  );
+};
 
-    return (
-        <button className="mybutton" onClick={handleClick}>{title}</button>
-    )
-
+Button.propTypes = {
+  title: PropTypes.string,
+  handleClick: PropTypes.func,
+  image: PropTypes.node
+};
+Button.defaultProps = {
+    title:"Click this",
 }
 export default Button;
-

@@ -1,0 +1,12 @@
+.myheader {
+    color:black;
+    display: inline;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    padding-top:15px;
+    padding-bottom:15px;
+    justify-content: center;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+}

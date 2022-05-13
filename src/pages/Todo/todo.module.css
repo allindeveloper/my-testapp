@@ -1,0 +1,41 @@
+:root {
+    --appPadding: 10px;
+  }
+
+.todo {
+    border: 1px solid #eeeeee;
+    border-radius: 4px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    max-width: 400px;
+    padding-bottom: 10px;
+    box-shadow: 0px 11px 9px -7px rgba(0,0,0,0.1);
+}
+
+.todoWrapper {
+    height: 300px;
+    overflow: scroll;
+}
+
+.bottomSection {
+    display: flex;
+    justify-content:space-between;
+    padding-left: var(--appPadding);
+    padding-right: var(--appPadding);
+    margin-top: 5px;
+}
+.bottomSection div:first-child {
+    width: 70%;
+}
+
+
+@media screen and (min-width: 480px) {
+    .todo {
+      
+    }
+  }
