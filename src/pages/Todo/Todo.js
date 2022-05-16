@@ -32,7 +32,7 @@ const Todo = () => {
 
   const deleteTodo = (todoItem) => {
     alert(`${todoItem.name} with id ${todoItem.id} has been deleted`)
-    
+  
   //   todos.filter((todos,)=>{
       
     // })
@@ -41,7 +41,7 @@ const Todo = () => {
 
     // then assign the filter result to a new variable
 
-    // then set the value of todos array to this new variable in the above step
+    // then set the value of todos state array to this new variable in the above step
 
 
   }
