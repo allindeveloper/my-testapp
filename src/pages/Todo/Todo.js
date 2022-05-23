@@ -3,12 +3,12 @@ import Header from "../../components/Header/Header";
 import CustomInput from "../../components/Input/CustomInput";
 import CustomButton from "../../components/Button/CustomButton";
 import TodoItem from "../../components/Item/TodoItem";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 const Todo = () => {
 
   const [todoValue, setTodoValue] = useState("");
   const [todos, setTodos] = useState([])
-
+  const [count, setCount] = useState(0);
   const onInputChange = (event) => {
     const newTodo = event.target.value;
     setTodoValue(newTodo) // update the input value to the state
@@ -31,18 +31,10 @@ const Todo = () => {
   }
 
   const deleteTodo = (todoItem) => {
+
+    const newtodos = todos.filter(element => element.id !== todoItem.id);
+    setTodos(newtodos)
     alert(`${todoItem.name} with id ${todoItem.id} has been deleted`)
-  
-  //   todos.filter((todos,)=>{
-      
-    // })
-  //  todos.filter(todoItem.id)
-    // filter the todos using todoItem.id
-
-    // then assign the filter result to a new variable
-
-    // then set the value of todos state array to this new variable in the above step
-
 
   }
   return (
