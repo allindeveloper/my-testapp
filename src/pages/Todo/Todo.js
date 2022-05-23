@@ -3,12 +3,11 @@ import Header from "../../components/Header/Header";
 import CustomInput from "../../components/Input/CustomInput";
 import CustomButton from "../../components/Button/CustomButton";
 import TodoItem from "../../components/Item/TodoItem";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 const Todo = () => {
 
   const [todoValue, setTodoValue] = useState("");
   const [todos, setTodos] = useState([])
-  const [count, setCount] = useState(0);
   const onInputChange = (event) => {
     const newTodo = event.target.value;
     setTodoValue(newTodo) // update the input value to the state
